@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Games101 Experiment2
 
 ## 实验内容
@@ -16,3 +17,6 @@
 - 抗锯齿后
 - <img src="C:\Users\i love china\AppData\Roaming\Typora\typora-user-images\image-20250511131038302.png" alt="image-20250511131038302" style="zoom:50%;" />
 - 可以看到，锯齿状有所改善
+=======
+# Games101_Z-bufferAndAnti-aliasing
+>>>>>>> 36629d5653bc97dc0e01ee696615dbbab9e6c02f
