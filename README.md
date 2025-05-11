@@ -1,22 +1,17 @@
-<<<<<<< HEAD
-# Games101 Experiment2
+# Games101 Experiment 2
 
-## 实验内容
+## Experiment Content
 
-- 了解z-buffer的使用，以及使用SSAA进行抗锯齿
-- 对于z-buffer的解决方案，即为使用一个depth_buf数组对每个像素点的当前深度进行存储。每次需要着色一个像素点的时候，则将当前的深度z和depth_buf中的深度z进行比较，如果当前深度小于depth_buf中的深度，则说明当前图像在更前面，应该着色。着色后记得更新depth_buf中的值即可
-- 对于SSAA抗锯齿，主要思想即为将一个像素点拆分成4个，且使用super_depth_buf存储拆分后的像素点的缓冲，以及使用super_color存储拆分后的像素点的颜色，最后，对每个像素点求平均即可
+- Understand the use of the Z-buffer and apply SSAA (Super Sampling Anti-Aliasing) for anti-aliasing.
+- The Z-buffer solution involves maintaining a `depth_buf` array to store the depth value of each pixel. When a pixel is about to be shaded, its depth `z` is compared with the value in `depth_buf`. If the current `z` is smaller, it indicates that the fragment is closer to the camera and should be shaded. After shading, the `depth_buf` should be updated accordingly.
+- For SSAA anti-aliasing, the main idea is to divide each pixel into 4 sub-pixels. A `super_depth_buf` is used to store the depth of each sub-pixel, and `super_color` is used to store the color values. Finally, the color of each pixel is obtained by averaging the colors of its sub-pixels.
 
+## Experiment Results
 
+- Before anti-aliasing  
+- <img src="https://github.com/corgiInequation/Games101_Z-bufferAndAnti-aliasing/blob/main/image1.png" alt="before-aa" width="50%" />  
+- The edges of the green triangle show obvious jagged artifacts.  
 
-## 实验结果
-
-- 抗锯齿前
-- <img src="C:\Users\i love china\AppData\Roaming\Typora\typora-user-images\image-20250511130850602.png" alt="image-20250511130850602" style="zoom:50%;" />
-- 绿色三角形边缘有明显的锯齿状
-- 抗锯齿后
-- <img src="C:\Users\i love china\AppData\Roaming\Typora\typora-user-images\image-20250511131038302.png" alt="image-20250511131038302" style="zoom:50%;" />
-- 可以看到，锯齿状有所改善
-=======
-# Games101_Z-bufferAndAnti-aliasing
->>>>>>> 36629d5653bc97dc0e01ee696615dbbab9e6c02f
+- After anti-aliasing  
+- <img src="https://github.com/corgiInequation/Games101_Z-bufferAndAnti-aliasing/blob/main/image2.png" alt="after-aa" width="50%" />  
+- The jagged edges are visibly smoothed out.
